@@ -4,7 +4,7 @@ const showLogin = () => {
     <h1>Login Form</h1>
     <p><input type="text" id="txtEmail"></p>
     <p><input type="password" id="txtPass"></p>
-    <p><button>Log In</button></p>
+    <p><button onclick='showWelcome()'> LOGIN </button></p>
     <p><button onclick='showRegister()'>Create Account</button></p>
     </div>
     `
@@ -17,7 +17,21 @@ const showRegister = () => {
     <p><input type="text" id="txtName"></p>
      <p><input type="text" id="txtEmail"></p>
     <p><input type="password" id="txtPass"></p>
+    <p><button onclick='showLogin()'> Already have an account </button></p>
     <button>Register</button>
+    `
+    root.innerHTML = str
+}
+
+const showWelcome = () => {
+    let str=`
+    <h1>WELCOME!</h1>
+    `
+    root.innerHTML = str
+}
+const showHome =() => {
+    let str=`
+
     `
     root.innerHTML = str
 }
