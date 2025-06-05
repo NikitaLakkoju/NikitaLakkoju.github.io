@@ -10,13 +10,30 @@
     function greet(){
         alert(txtname.value)
     }
-    function calc(){
+    function calcadd(){
         let a=Number(t1.value)
         let b =Number(t2.value)
         //alert(a+b)
         dvResult.innerHTML = a+b;
     }
-    
+    function calcsub(){
+        let a=Number(t1.value)
+        let b =Number(t2.value)
+        //alert(a+b)
+        dvResult.innerHTML = a-b;
+    }
+    function calcmul(){
+        let a=Number(t1.value)
+        let b =Number(t2.value)
+        //alert(a+b)
+        dvResult.innerHTML = a*b;
+    }
+    function calcdiv(){
+        let a=Number(t1.value)
+        let b =Number(t2.value)
+        //alert(a+b)
+        dvResult.innerHTML = a/b;
+    }
 </script>
     <br>
     <input type="text" id="txtname" />
@@ -24,8 +41,13 @@
     <input type="text" id="t1" />
     <input type="text" id="t2" />
 
-    <button onclick="calc()" style="background-color: plum;">Submit</button>
+    <button onclick="calcadd()" style="background-color: plum;">ADD</button>
 <div id="dvResult"></div>
-
+    <button onclick="calcsub()" style="background-color: plum;">SUBSTRACT</button>
+<div id="dvResult"></div>
+    <button onclick="calcmul()" style="background-color: plum;">MULTIPLY</button>
+<div id="dvResult"></div>
+    <button onclick="calcdiv()" style="background-color: plum;">DIVIDE</button>
+<div id="dvResult"></div>
 </body>
 </html>
