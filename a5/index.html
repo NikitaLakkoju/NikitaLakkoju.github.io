@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" />
+    <input type="text" id="email" />
+    <input type="text" id="pass" />
+
+    <button onclick="greet()" style="background-color: darkmagenta;">INFO</button>
+
+    <div id="dvResult"></div>
+
+    <script>
+        function greet() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+
+            document.getElementById("dvResult").innerHTML = 
+                "Name: " + name + "<br>" +
+                "Email: " + email + "<br>" +
+                "Password: " + pass;
+        }
+    </script>
+</body>
+</html>
