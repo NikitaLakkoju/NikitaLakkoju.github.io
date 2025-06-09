@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FruitList</title>
+    <script>
+      let fruits = [];
+      function del(value){
+        fruits=fruits.filter((e) => e!=value);
+        add();
+      }
+      function add() {
+        const input = document.getElementById("FruitList").value.trim();
+        fruits.push(input);
+        const listHTML = fruits.map((fruit) => `<li>${fruit}
+        <button onclick="undo()">Delete</button></li>`).join("");
+        document.getElementById("fruitList").innerHTML = listHTML;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Fruit List</h1>
+      <input type="text" id="FruitList" placeholder="Enter your fruit"/>
+      <button onclick="add()">Add</button>
+      <button>search</button>
+      <ul id="fruitList"></ul>
+      
+      
+    </div>
+  </body>
+</html>                 
